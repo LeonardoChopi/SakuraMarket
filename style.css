@@ -1,13 +1,185 @@
-@import "Styles/Header.css";
-@import "Styles/Precentacion.css";
-@import "Styles/Productos.css";
-
 body{
     font-family: comic sans ms;
     background-color: beige;
 }
 
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a{
+    margin: 0 20px;
+}
+
+nav img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    height: 60px;
+}
+
+/*Presentacion*/
+#Precentacion{
+    text-align: center;
+    margin-top: 20px;
+
+    
+}
+#Precentacion img{
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/*Productos*/
+.Productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* --- CARDS --- */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #d63384;
+}
+
+.card p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+    color: #444;
+}
+
+.card button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background-color: #b52a6b;
+}
+
+/*Footer*/
 footer{
     text-align: center;
     margin-top: 20px;
+}
+
+.info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-footer div {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 15px;
+}
+
+.info-footer div:not(:last-child) {
+    border-right: 2px solid #e0e0e0;
+}
+
+.info-footer h3 {
+    margin-bottom: 10px;
+    color: #d63384;
+}
+
+.info-footer a {
+    text-decoration: none;
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.info-footer a:hover {
+    background-color: #b52a6b;
+    transform: translateY(-3px);
+}
+
+.info-footer a:active {
+    background-color: #9e245e;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #Precentacion img {
+        width: 200px;
+    }
+
+    .info-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-footer div {
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .info-footer div:last-child {
+        border-bottom: none;
+    }
 }
