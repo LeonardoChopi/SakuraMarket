@@ -1,0 +1,13 @@
+@import "Styles/Header.css";
+@import "Styles/Precentacion.css";
+@import "Styles/Productos.css";
+
+body{
+    font-family: comic sans ms;
+    background-color: beige;
+}
+
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
